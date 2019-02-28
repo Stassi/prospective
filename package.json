@@ -4,6 +4,11 @@
   "license": "MIT",
   "author": "Andreas Stassivik <andreas@stassi.net> (https://github.com/Stassi)",
   "repository": "github:Stassi/prospective",
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "start": "next start"
+  },
   "dependencies": {
     "next": "^8.0.3",
     "react": "^16.8.3",
