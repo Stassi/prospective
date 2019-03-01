@@ -1,6 +1,4 @@
 import React from 'react'
-import { NextHead } from '../components'
+import App from '../components/App'
 
-const Index = () => <NextHead />
-
-export default Index
+export default () => <App />
