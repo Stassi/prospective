@@ -3,7 +3,7 @@ import Head from 'next/head'
 import React from 'react'
 import MaterialStyles from './MaterialStyles'
 
-export default ({
+const NextHead = ({
   baseline = true,
   fontIcons = false,
   responsive = true,
@@ -22,3 +22,5 @@ export default ({
   </Head>,
   baseline && <CssBaseline key='baseline' />
 ]
+
+export default NextHead

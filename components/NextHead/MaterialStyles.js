@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default ({
+const MaterialStyles = ({
   fontIcons,
   responsive,
   roboto
@@ -27,3 +27,5 @@ export default ({
     />
   )
 ]
+
+export default MaterialStyles

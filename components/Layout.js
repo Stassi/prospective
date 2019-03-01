@@ -2,7 +2,7 @@ import React from 'react'
 import Button from '@material-ui/core/Button'
 import NextHead from './NextHead'
 
-export default () => (
+const Layout = () => (
   <>
     <NextHead />
     <Button
@@ -13,3 +13,5 @@ export default () => (
     </Button>
   </>
 )
+
+export default Layout
