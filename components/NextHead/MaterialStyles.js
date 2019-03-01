@@ -5,18 +5,18 @@ export default ({
   responsive,
   roboto
 }) => [
-  responsive && (
-    <meta
-      content='initial-scale=1, minimum-scale=1, shrink-to-fit=no, width=device-width'
-      key='responsive'
-      name='viewport'
-    />
-  ),
   fontIcons && (
     <link
       href='https://fonts.googleapis.com/icon?family=Material+Icons'
       key='fontIcons'
       rel='stylesheet'
+    />
+  ),
+  responsive && (
+    <meta
+      content='initial-scale=1, minimum-scale=1, shrink-to-fit=no, width=device-width'
+      key='responsive'
+      name='viewport'
     />
   ),
   roboto && (
