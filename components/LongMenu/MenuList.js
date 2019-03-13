@@ -1,14 +1,14 @@
 import React from 'react'
 import Menu from '@material-ui/core/Menu'
-import MenuItem from '@material-ui/core/MenuItem'
+import MenuItems from './MenuItems'
 
 const MenuList = ({
+  actions,
   anchorEl,
   isOpen,
   menuID,
-  options,
-  optionSelected,
-  actions: { close }
+  actions: { close },
+  ...props
 }) => (
   <Menu
     anchorEl={anchorEl}
@@ -22,15 +22,7 @@ const MenuList = ({
       }
     }}
   >
-    {options.map(option => (
-      <MenuItem
-        key={option}
-        onClick={close}
-        selected={optionSelected(option)}
-      >
-        {option}
-      </MenuItem>
-    ))}
+    <MenuItems {...{ ...props, actions }} />
   </Menu>
 )
 
