@@ -1,6 +1,7 @@
 import React from 'react'
 import LongMenu from '../LongMenu'
 import NextHead from '../NextHead'
+import StyleDemo from '../StyleDemo'
 
 const Layout = () => (
   <>
@@ -24,6 +25,7 @@ const Layout = () => (
       ],
       selectedOption: 'Pyxis'
     }} />
+    <StyleDemo />
   </>
 )
 
