@@ -2,6 +2,7 @@ import React from 'react'
 import LongMenu from '../LongMenu'
 import NextHead from '../NextHead'
 import StyleDemo from '../StyleDemo'
+import ThemeButton from '../ThemeButton'
 
 const Layout = () => (
   <>
@@ -26,6 +27,7 @@ const Layout = () => (
       selectedOption: 'Pyxis'
     }} />
     <StyleDemo />
+    <ThemeButton />
   </>
 )
 
