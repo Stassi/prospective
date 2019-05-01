@@ -4,7 +4,7 @@ import NextHead from '../NextHead'
 import StyleDemo from '../StyleDemo'
 import ThemeButton from '../ThemeButton'
 
-const Layout = () => (
+const Layout = ({ ...props }) => (
   <>
     <NextHead />
     <LongMenu {...{
@@ -27,7 +27,7 @@ const Layout = () => (
       selectedOption: 'Pyxis'
     }} />
     <StyleDemo />
-    <ThemeButton />
+    <ThemeButton {...props} />
   </>
 )
 
