@@ -14,8 +14,12 @@ const defaultProps = {
 }
 
 const SimpleAppBar = ({
+  children,
   title,
-  classes: { root }
+  classes: {
+    grow,
+    root
+  }
 }) => (
   <div className={root}>
     <AppBar
@@ -24,11 +28,14 @@ const SimpleAppBar = ({
     >
       <Toolbar>
         <Typography
+          className={grow}
           color='inherit'
           variant='h6'
         >
           {title}
         </Typography>
+
+        {children}
       </Toolbar>
     </AppBar>
   </div>

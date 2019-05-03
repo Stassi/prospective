@@ -2,11 +2,15 @@ import React from 'react'
 import LongMenu from '../LongMenu'
 import NextHead from '../NextHead'
 import StyleDemo from '../StyleDemo'
+import SimpleAppBar from '../SimpleAppBar'
 import ThemeButton from '../ThemeButton'
 
-const Layout = ({ ...props }) => (
+const Layout = ({ actions: { toggleDarkTheme } }) => (
   <>
     <NextHead />
+    <SimpleAppBar>
+      <ThemeButton {...{ toggleDarkTheme }} />
+    </SimpleAppBar>
     <LongMenu {...{
       options: [
         'None',
@@ -27,7 +31,6 @@ const Layout = ({ ...props }) => (
       selectedOption: 'Pyxis'
     }} />
     <StyleDemo />
-    <ThemeButton {...props} />
   </>
 )
 
