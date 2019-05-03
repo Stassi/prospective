@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 
 const propTypes = {
+  children: PropTypes.node.isRequired,
   classes: PropTypes.object.isRequired,
   title: PropTypes.string
 }
