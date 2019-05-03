@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import AppBar from '@material-ui/core/AppBar'
+import AppBarMaterial from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 
@@ -13,7 +13,7 @@ const defaultProps = {
   title: 'App title'
 }
 
-const SimpleAppBar = ({
+const AppBar = ({
   children,
   title,
   classes: {
@@ -22,9 +22,9 @@ const SimpleAppBar = ({
   }
 }) => (
   <div className={root}>
-    <AppBar
-      position='static'
+    <AppBarMaterial
       color='default'
+      position='static'
     >
       <Toolbar>
         <Typography
@@ -37,11 +37,11 @@ const SimpleAppBar = ({
 
         {children}
       </Toolbar>
-    </AppBar>
+    </AppBarMaterial>
   </div>
 )
 
-SimpleAppBar.propTypes = propTypes
-SimpleAppBar.defaultProps = defaultProps
+AppBar.propTypes = propTypes
+AppBar.defaultProps = defaultProps
 
-export default SimpleAppBar
+export default AppBar

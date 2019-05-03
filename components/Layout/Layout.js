@@ -1,16 +1,16 @@
 import React from 'react'
+import AppBar from '../AppBar'
 import LongMenu from '../LongMenu'
 import NextHead from '../NextHead'
 import StyleDemo from '../StyleDemo'
-import SimpleAppBar from '../SimpleAppBar'
 import ThemeButton from '../ThemeButton'
 
 const Layout = ({ actions: { toggleDarkTheme } }) => (
   <>
     <NextHead />
-    <SimpleAppBar>
+    <AppBar>
       <ThemeButton {...{ toggleDarkTheme }} />
-    </SimpleAppBar>
+    </AppBar>
     <LongMenu {...{
       options: [
         'None',
