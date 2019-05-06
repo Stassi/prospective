@@ -1,23 +1,12 @@
 import React, { useState } from 'react'
 import LayoutWithTheme from './LayoutWithTheme'
-
-const darkThemeState = ({
-  usingState: [
-    darkThemeEnabled,
-    setState
-  ]
-}) => ({
-  darkThemeEnabled,
-  actions: {
-    toggleDarkTheme: () => setState(!darkThemeEnabled)
-  }
-})
+import { darkThemeState, isNightTime } from '../../src'
 
 const LayoutWithThemeUsingState = ({ ...props }) => (
   <LayoutWithTheme {...{
     ...props,
     ...darkThemeState({
-      usingState: useState(false)
+      usingState: useState(isNightTime())
     })
   }} />
 )
