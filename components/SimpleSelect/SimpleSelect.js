@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import FormControl from '@material-ui/core/FormControl'
 import Input from '@material-ui/core/Input'
@@ -8,67 +8,51 @@ import Select from '@material-ui/core/Select'
 
 const propTypes = { classes: PropTypes.object.isRequired }
 
-class SimpleSelect extends Component {
-  state = { age: '' };
+const label = 'age'
+const labelPlaceholder = `${label}-label-placeholder`
 
-  handleChange = ({
-    target: {
-      name,
-      value
-    }
-  }) => {
-    this.setState({ [name]: value })
-  };
-
-  render () {
-    const {
-      classes: {
-        formControl,
-        root,
-        selectEmpty
-      }
-    } = this.props
-
-    const { age } = this.state
-
-    return (
-      <form
-        autoComplete='off'
-        className={root}
-      >
-        <FormControl className={formControl}>
-          <InputLabel
-            htmlFor='age-label-placeholder'
-            shrink
-          >
-            Age
-          </InputLabel>
-
-          <Select
-            className={selectEmpty}
-            displayEmpty
-            input={(
-              <Input
-                id='age-label-placeholder'
-                name='age'
-              />
-            )}
-            name='age'
-            onChange={this.handleChange}
-            value={age}
-          >
-            <MenuItem value=''>
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-          </Select>
-        </FormControl>
-      </form>
-    )
+const SimpleSelect = ({
+  selected,
+  actions: { setSelected },
+  classes: {
+    formControl,
+    root,
+    selectEmpty
   }
-}
+}) => (
+  <form
+    autoComplete='off'
+    className={root}
+  >
+    <FormControl className={formControl}>
+      <InputLabel
+        htmlFor={labelPlaceholder}
+        shrink
+      >
+        Age
+      </InputLabel>
+
+      <Select
+        className={selectEmpty}
+        displayEmpty
+        input={(
+          <Input
+            id={labelPlaceholder}
+            name={label}
+          />
+        )}
+        name={label}
+        onChange={setSelected}
+        value={selected}
+      >
+        <MenuItem value=''>None</MenuItem>
+        <MenuItem value={10}>Ten</MenuItem>
+        <MenuItem value={20}>Twenty</MenuItem>
+        <MenuItem value={30}>Thirty</MenuItem>
+      </Select>
+    </FormControl>
+  </form>
+)
 
 SimpleSelect.propTypes = propTypes
 

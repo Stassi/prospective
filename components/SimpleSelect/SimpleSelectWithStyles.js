@@ -1,5 +1,5 @@
 import { withStyles } from '@material-ui/styles'
-import SimpleSelect from './SimpleSelect'
+import SimpleSelect from './SimpleSelectUsingState'
 
 const styles = ({
   formControl: {
