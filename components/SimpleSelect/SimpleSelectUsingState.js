@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import SimpleSelect from './SimpleSelect'
+import SimpleSelectWithLabelPlaceholder from './SimpleSelectWithLabelPlaceholder'
 
 const selectedState = ({
   usingState: [
@@ -14,7 +14,7 @@ const selectedState = ({
 })
 
 const SimpleSelectUsingState = ({ ...props }) => (
-  <SimpleSelect {...{
+  <SimpleSelectWithLabelPlaceholder {...{
     ...props,
     ...selectedState({
       usingState: useState('')

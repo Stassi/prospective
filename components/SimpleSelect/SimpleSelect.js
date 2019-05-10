@@ -8,10 +8,10 @@ import Select from '@material-ui/core/Select'
 
 const propTypes = { classes: PropTypes.object.isRequired }
 
-const label = 'age'
-const labelPlaceholder = `${label}-label-placeholder`
-
 const SimpleSelect = ({
+  labelID,
+  labelName,
+  labelPlaceholder,
   selected,
   actions: { setSelected },
   classes: {
@@ -29,7 +29,7 @@ const SimpleSelect = ({
         htmlFor={labelPlaceholder}
         shrink
       >
-        Age
+        {labelName}
       </InputLabel>
 
       <Select
@@ -38,10 +38,10 @@ const SimpleSelect = ({
         input={(
           <Input
             id={labelPlaceholder}
-            name={label}
+            name={labelID}
           />
         )}
-        name={label}
+        name={labelID}
         onChange={setSelected}
         value={selected}
       >
