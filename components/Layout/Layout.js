@@ -3,14 +3,14 @@ import AppBar from '../AppBar'
 import NextHead from '../NextHead'
 import StyleDemo from '../StyleDemo'
 import ThemeButton from '../ThemeButton'
-import SimpleSelect from '../SimpleSelect'
+import MenuSelect from '../MenuSelect'
 
 const Layout = ({ actions: { toggleDarkTheme } }) => (
   <>
     <NextHead />
     <AppBar>
       <>
-        <SimpleSelect {...{
+        <MenuSelect {...{
           labelID: 'age',
           labelName: 'Age'
         }} />

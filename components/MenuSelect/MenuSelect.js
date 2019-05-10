@@ -8,7 +8,7 @@ import Select from '@material-ui/core/Select'
 
 const propTypes = { classes: PropTypes.object.isRequired }
 
-const SimpleSelect = ({
+const MenuSelect = ({
   labelID,
   labelName,
   labelPlaceholder,
@@ -54,6 +54,6 @@ const SimpleSelect = ({
   </form>
 )
 
-SimpleSelect.propTypes = propTypes
+MenuSelect.propTypes = propTypes
 
-export default SimpleSelect
+export default MenuSelect

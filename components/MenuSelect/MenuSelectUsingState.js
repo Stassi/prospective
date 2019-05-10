@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import SimpleSelectWithLabelPlaceholder from './SimpleSelectWithLabelPlaceholder'
+import MenuSelectWithLabelPlaceholder from './MenuSelectWithLabelPlaceholder'
 
 const selectedState = ({
   usingState: [
@@ -13,8 +13,8 @@ const selectedState = ({
   }
 })
 
-const SimpleSelectUsingState = ({ ...props }) => (
-  <SimpleSelectWithLabelPlaceholder {...{
+const MenuSelectUsingState = ({ ...props }) => (
+  <MenuSelectWithLabelPlaceholder {...{
     ...props,
     ...selectedState({
       usingState: useState('')
@@ -22,4 +22,4 @@ const SimpleSelectUsingState = ({ ...props }) => (
   }} />
 )
 
-export default SimpleSelectUsingState
+export default MenuSelectUsingState

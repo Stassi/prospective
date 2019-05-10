@@ -1,5 +1,5 @@
 import { withStyles } from '@material-ui/styles'
-import SimpleSelect from './SimpleSelectUsingState'
+import MenuSelectUsingState from './MenuSelectUsingState'
 
 const styles = ({
   formControl: {
@@ -15,4 +15,4 @@ const styles = ({
   }
 })
 
-export default withStyles(styles)(SimpleSelect)
+export default withStyles(styles)(MenuSelectUsingState)
