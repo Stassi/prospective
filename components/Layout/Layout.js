@@ -1,35 +1,22 @@
 import React from 'react'
 import AppBar from '../AppBar'
-import LongMenu from '../LongMenu'
 import NextHead from '../NextHead'
 import StyleDemo from '../StyleDemo'
 import ThemeButton from '../ThemeButton'
+import SimpleSelect from '../SimpleSelect'
 
 const Layout = ({ actions: { toggleDarkTheme } }) => (
   <>
     <NextHead />
     <AppBar>
-      <ThemeButton {...{ toggleDarkTheme }} />
+      <>
+        <SimpleSelect {...{
+          labelID: 'age',
+          labelName: 'Age'
+        }} />
+        <ThemeButton {...{ toggleDarkTheme }} />
+      </>
     </AppBar>
-    <LongMenu {...{
-      options: [
-        'None',
-        'Atria',
-        'Callisto',
-        'Dione',
-        'Ganymede',
-        'Hangouts Call',
-        'Luna',
-        'Oberon',
-        'Phobos',
-        'Pyxis',
-        'Sedna',
-        'Titania',
-        'Triton',
-        'Umbriel'
-      ],
-      selectedOption: 'Pyxis'
-    }} />
     <StyleDemo />
   </>
 )
