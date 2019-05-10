@@ -12,6 +12,7 @@ const MenuSelect = ({
   labelID,
   labelName,
   labelPlaceholder,
+  menuItems,
   selected,
   actions: { setSelected },
   classes: {
@@ -45,10 +46,11 @@ const MenuSelect = ({
         onChange={setSelected}
         value={selected}
       >
-        <MenuItem value=''>None</MenuItem>
-        <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-        <MenuItem value={30}>Thirty</MenuItem>
+        {menuItems.map(({ label, value }) => (
+          <MenuItem {...{ value }}>
+            {label}
+          </MenuItem>
+        ))}
       </Select>
     </FormControl>
   </form>
