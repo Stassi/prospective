@@ -47,7 +47,10 @@ const MenuSelect = ({
         value={selected}
       >
         {menuItems.map(({ label, value }) => (
-          <MenuItem {...{ value }}>
+          <MenuItem {...{
+            value,
+            key: value
+          }}>
             {label}
           </MenuItem>
         ))}
