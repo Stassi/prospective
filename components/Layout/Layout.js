@@ -11,10 +11,11 @@ const Layout = ({ actions: { toggleDarkTheme } }) => (
     <AppBar>
       <>
         <MenuSelect {...{
+          initialSelected: '0',
           labelID: 'age',
           labelName: 'Age',
           menuItems: [
-            { label: 'None', value: '' },
+            { label: 'None', value: '0' },
             { label: 'Ten', value: '10' },
             { label: 'Twenty', value: '20' },
             { label: 'Thirty', value: '30' }

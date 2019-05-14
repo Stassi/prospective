@@ -13,11 +13,11 @@ const selectedState = ({
   }
 })
 
-const MenuSelectUsingState = ({ ...props }) => (
+const MenuSelectUsingState = ({ initialSelected, ...props }) => (
   <MenuSelectWithLabelPlaceholder {...{
     ...props,
     ...selectedState({
-      usingState: useState('')
+      usingState: useState(initialSelected)
     })
   }} />
 )
