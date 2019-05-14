@@ -14,7 +14,7 @@ const Layout = ({ actions: { toggleDarkTheme } }) => (
           initialSelected: '0',
           labelID: 'age',
           labelName: 'Age',
-          menuItems: [
+          options: [
             { label: 'None', value: '0' },
             { label: 'Ten', value: '10' },
             { label: 'Twenty', value: '20' },

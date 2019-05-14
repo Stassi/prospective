@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import FormControl from '@material-ui/core/FormControl'
 import Input from '@material-ui/core/Input'
 import InputLabel from '@material-ui/core/InputLabel'
-import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
+import menuItems from './menuItems'
 
 const propTypes = { classes: PropTypes.object.isRequired }
 
@@ -12,7 +12,7 @@ const MenuSelect = ({
   labelID,
   labelName,
   labelPlaceholder,
-  menuItems,
+  options,
   selected,
   actions: { setSelected },
   classes: {
@@ -46,14 +46,7 @@ const MenuSelect = ({
         onChange={setSelected}
         value={selected}
       >
-        {menuItems.map(({ label, value }) => (
-          <MenuItem {...{
-            value,
-            key: value
-          }}>
-            {label}
-          </MenuItem>
-        ))}
+        {menuItems(options)}
       </Select>
     </FormControl>
   </form>
