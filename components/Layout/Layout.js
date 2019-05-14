@@ -12,14 +12,14 @@ const Layout = ({ actions: { toggleDarkTheme } }) => (
       <>
         <MenuSelect {...{
           initialSelected: '0',
-          labelID: 'age',
-          labelName: 'Age',
+          label: 'Age',
           options: [
             { label: 'None', value: '0' },
             { label: 'Ten', value: '10' },
             { label: 'Twenty', value: '20' },
             { label: 'Thirty', value: '30' }
-          ]
+          ],
+          value: 'age'
         }} />
         <ThemeButton {...{ toggleDarkTheme }} />
       </>

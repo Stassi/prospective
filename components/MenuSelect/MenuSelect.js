@@ -9,11 +9,11 @@ import menuItems from './menuItems'
 const propTypes = { classes: PropTypes.object.isRequired }
 
 const MenuSelect = ({
-  labelID,
-  labelName,
+  label,
   labelPlaceholder,
   options,
   selected,
+  value,
   actions: { setSelected },
   classes: {
     formControl,
@@ -30,7 +30,7 @@ const MenuSelect = ({
         htmlFor={labelPlaceholder}
         shrink
       >
-        {labelName}
+        {label}
       </InputLabel>
 
       <Select
@@ -39,10 +39,10 @@ const MenuSelect = ({
         input={(
           <Input
             id={labelPlaceholder}
-            name={labelID}
+            name={value}
           />
         )}
-        name={labelID}
+        name={value}
         onChange={setSelected}
         value={selected}
       >

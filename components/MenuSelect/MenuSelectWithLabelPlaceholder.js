@@ -1,11 +1,11 @@
 import React from 'react'
 import MenuSelect from './MenuSelect'
 
-const MenuSelectWithLabelPlaceholder = ({ labelID, ...props }) => (
+const MenuSelectWithLabelPlaceholder = ({ value, ...props }) => (
   <MenuSelect {...{
     ...props,
-    labelID,
-    labelPlaceholder: `${labelID}-label-placeholder`
+    value,
+    labelPlaceholder: `${value}-label-placeholder`
   }} />
 )
 
