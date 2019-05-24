@@ -1,18 +1,11 @@
 import React from 'react'
-import AlgorithmMenuSelect from '../AlgorithmMenuSelect'
-import AppBar from '../AppBar'
+import HigherOrderComponent from '../HigherOrderComponent'
 import NextHead from '../NextHead'
-import ThemeButton from '../ThemeButton'
 
-const Layout = ({ actions: { toggleDarkTheme } }) => (
+const Layout = () => (
   <>
     <NextHead />
-    <AppBar>
-      <>
-        <AlgorithmMenuSelect />
-        <ThemeButton {...{ toggleDarkTheme }} />
-      </>
-    </AppBar>
+    <HigherOrderComponent />
   </>
 )
 

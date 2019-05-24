@@ -1,3 +1,3 @@
-import Layout from './LayoutWithThemeUsingState'
+import Layout from './Layout'
 
 export default Layout
