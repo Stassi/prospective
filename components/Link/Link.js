@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
-import { withRouter } from 'next/router'
 import MuiLink from '@material-ui/core/Link'
 import NextComposed from './NextComposed'
 
@@ -20,8 +19,6 @@ const propTypes = {
 
 const defaultProps = { activeClassName: 'active' }
 
-// A styled version of the Next.js Link component:
-// https://nextjs.org/docs/#with-link
 function Link (props) {
   const {
     activeClassName,
