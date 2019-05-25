@@ -19,7 +19,7 @@ const propTypes = {
 
 const defaultProps = { activeClassName: 'active' }
 
-function Link (props) {
+const Link = props => {
   const {
     activeClassName,
     naked,
