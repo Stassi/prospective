@@ -1,9 +1,7 @@
 import React from 'react'
 import App, { Container } from 'next/app'
 import Head from 'next/head'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import { ThemeProvider } from '@material-ui/styles'
-import theme from '../src/theme'
+import Body from '../components/AppBody'
 
 class MyApp extends App {
   componentDidMount () {
@@ -12,17 +10,14 @@ class MyApp extends App {
   }
 
   render () {
-    const { Component, pageProps } = this.props
-
     return (
       <Container>
         <Head>
-          <title>My page</title>
+          <title>
+            My page
+          </title>
         </Head>
-        <ThemeProvider {...{ theme }}>
-          <CssBaseline />
-          <Component {...pageProps} />
-        </ThemeProvider>
+        <Body {...this.props} />
       </Container>
     )
   }
