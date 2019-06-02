@@ -8,6 +8,14 @@ import { ServerStyleSheets } from '@material-ui/styles'
 import flush from 'styled-jsx/server'
 import theme from '../src/theme'
 
+const {
+  palette: {
+    primary: {
+      main: themeColor
+    }
+  }
+} = theme()
+
 class MyDocument extends Document {
   render () {
     return (
@@ -22,7 +30,7 @@ class MyDocument extends Document {
             name='viewport'
           />
           <meta
-            content={theme.palette.primary.main}
+            content={themeColor}
             name='theme-color'
           />
           <link
