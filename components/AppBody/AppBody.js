@@ -17,10 +17,10 @@ const AppBody = ({
     }
   } : {})}>
     <CssBaseline />
-    <Component {...{
-      toggleDarkTheme,
-      ...pageProps
-    }} />
+    <Component
+      {...pageProps}
+      {...{ toggleDarkTheme }}
+    />
   </ThemeProvider>
 )
 
