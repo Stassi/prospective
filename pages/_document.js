@@ -8,6 +8,7 @@ import { ServerStyleSheets } from '@material-ui/styles'
 import flush from 'styled-jsx/server'
 import theme from '../src/theme'
 
+// TODO: Import themeColor from existing instance, avoid superfluous call
 const {
   palette: {
     primary: {
