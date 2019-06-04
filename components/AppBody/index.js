@@ -1,3 +1,3 @@
-import AppBody from './AppBodyUsingState'
+import AppBody from './AppBodyUsingDarkTheme'
 
 export default AppBody
