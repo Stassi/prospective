@@ -9,10 +9,10 @@ const useStyles = makeStyles({
 })
 
 const AppBarUsingStyles = props => (
-  <AppBar {...{
-    ...props,
-    classes: useStyles()
-  }} />
+  <AppBar
+    {...props}
+    classes={useStyles()}
+  />
 )
 
 export default AppBarUsingStyles
