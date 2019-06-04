@@ -2,12 +2,15 @@ import React from 'react'
 import DemoLayout from '../components/Demo/DemoLayout'
 import Link from '../components/Link'
 
-const About = () => (
+const Demo = () => (
   <DemoLayout>
-    <Link href='/demo'>
-      Go to the demo page
+    <Link
+      color='secondary'
+      href='/about'
+    >
+      Go to the about page
     </Link>
   </DemoLayout>
 )
 
-export default About
+export default Demo
