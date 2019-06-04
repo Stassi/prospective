@@ -13,13 +13,15 @@ const MenuSelect = ({
   label,
   labelPlaceholder,
   options,
-  selected,
   value,
-  actions: { setSelected },
   classes: {
     formControl,
     root,
     selectEmpty
+  },
+  menuSelect: {
+    selected,
+    setSelected
   }
 }) => (
   <form
