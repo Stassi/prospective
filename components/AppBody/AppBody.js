@@ -11,11 +11,7 @@ const AppBody = ({
     toggle: toggleDarkTheme
   }
 }) => (
-  <ThemeProvider theme={theme(darkThemeEnabled ? {
-    palette: {
-      type: 'dark'
-    }
-  } : {})}>
+  <ThemeProvider theme={theme(darkThemeEnabled)}>
     <CssBaseline />
     <Component
       {...pageProps}
