@@ -6,8 +6,22 @@ import InputLabel from '@material-ui/core/InputLabel'
 import Select from '@material-ui/core/Select'
 import menuItems from './menuItems'
 
-// TODO: propTypes
-const propTypes = { classes: PropTypes.object.isRequired }
+const propTypes = {
+  classes: PropTypes.shape({
+    formControl: PropTypes.string.isRequired,
+    root: PropTypes.string.isRequired,
+    selectEmpty: PropTypes.string.isRequired
+  }).isRequired,
+  label: PropTypes.string.isRequired,
+  labelPlaceholder: PropTypes.string.isRequired,
+  menuSelect: PropTypes.shape({
+    selected: PropTypes.string.isRequired,
+    setSelected: PropTypes.func.isRequired
+  }).isRequired,
+  // TODO: Define options subtypes
+  options: PropTypes.array.isRequired,
+  value: PropTypes.string.isRequired
+}
 
 const MenuSelect = ({
   label,
