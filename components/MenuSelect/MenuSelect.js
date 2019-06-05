@@ -4,7 +4,7 @@ import FormControl from '@material-ui/core/FormControl'
 import Input from '@material-ui/core/Input'
 import InputLabel from '@material-ui/core/InputLabel'
 import Select from '@material-ui/core/Select'
-import menuItems from './menuItems'
+import MenuItem from '@material-ui/core/MenuItem'
 
 const propTypes = {
   classes: PropTypes.shape({
@@ -18,8 +18,11 @@ const propTypes = {
     selected: PropTypes.string.isRequired,
     setSelected: PropTypes.func.isRequired
   }).isRequired,
-  // TODO: Define options subtypes
-  options: PropTypes.array.isRequired,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      value: PropTypes.string.isRequired
+    }).isRequired).isRequired,
   value: PropTypes.string.isRequired
 }
 
@@ -63,7 +66,17 @@ const MenuSelect = ({
         onChange={setSelected}
         value={selected}
       >
-        {menuItems(options)}
+        {options.map(({
+          label: optionLabel,
+          value: optionValue
+        }) => (
+          <MenuItem
+            key={optionValue}
+            value={optionValue}
+          >
+            {optionLabel}
+          </MenuItem>
+        ))}
       </Select>
     </FormControl>
   </form>
