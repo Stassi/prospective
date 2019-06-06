@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import MenuSelectUsingState from './MenuSelectUsingMenuSelect'
+import MenuSelectUsingMenuSelect from './MenuSelectUsingMenuSelect'
 
 const useStyles = makeStyles(({ spacing }) => ({
   formControl: {
@@ -17,10 +17,10 @@ const useStyles = makeStyles(({ spacing }) => ({
 }))
 
 const MenuSelectUsingStyles = props => (
-  <MenuSelectUsingState {...{
-    ...props,
-    classes: useStyles()
-  }} />
+  <MenuSelectUsingMenuSelect
+    {...props}
+    classes={useStyles()}
+  />
 )
 
 export default MenuSelectUsingStyles
