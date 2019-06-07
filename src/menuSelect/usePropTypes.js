@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
+import { setPropTypes } from 'recompose'
 
-const propTypes = {
+const usePropTypes = setPropTypes({
   classes: PropTypes.shape({
     formControl: PropTypes.string.isRequired,
     root: PropTypes.string.isRequired,
@@ -18,6 +19,6 @@ const propTypes = {
       value: PropTypes.string.isRequired
     }).isRequired).isRequired,
   value: PropTypes.string.isRequired
-}
+})
 
-export default propTypes
+export default usePropTypes

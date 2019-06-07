@@ -4,7 +4,7 @@ import Input from '@material-ui/core/Input'
 import InputLabel from '@material-ui/core/InputLabel'
 import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
-import { enhance, propTypes } from '../src/menuSelect/'
+import enhance from '../src/menuSelect'
 
 const MenuSelect = ({
   label,
@@ -61,8 +61,6 @@ const MenuSelect = ({
     </FormControl>
   </form>
 )
-
-MenuSelect.propTypes = propTypes
 
 const EnhancedMenuSelect = enhance(MenuSelect)
 

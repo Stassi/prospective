@@ -1,14 +1,12 @@
 import { compose } from 'recompose'
-import useLabelPlaceholder from './useLabelPlaceholder'
-import useMenuSelect from './useMenuSelect'
+import useDefaultProps from './useDefaultProps'
 import usePropTypes from './usePropTypes'
 import useStyles from './useStyles'
 
 const enhance = compose(
-  useLabelPlaceholder,
-  useMenuSelect,
   useStyles,
-  usePropTypes
+  usePropTypes,
+  useDefaultProps
 )
 
 export default enhance
