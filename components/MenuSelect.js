@@ -1,30 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import FormControl from '@material-ui/core/FormControl'
 import Input from '@material-ui/core/Input'
 import InputLabel from '@material-ui/core/InputLabel'
-import Select from '@material-ui/core/Select'
 import MenuItem from '@material-ui/core/MenuItem'
-
-const propTypes = {
-  classes: PropTypes.shape({
-    formControl: PropTypes.string.isRequired,
-    root: PropTypes.string.isRequired,
-    selectEmpty: PropTypes.string.isRequired
-  }).isRequired,
-  label: PropTypes.string.isRequired,
-  labelPlaceholder: PropTypes.string.isRequired,
-  menuSelect: PropTypes.shape({
-    selected: PropTypes.string.isRequired,
-    setSelected: PropTypes.func.isRequired
-  }).isRequired,
-  options: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string.isRequired,
-      value: PropTypes.string.isRequired
-    }).isRequired).isRequired,
-  value: PropTypes.string.isRequired
-}
+import Select from '@material-ui/core/Select'
+import { enhance, propTypes } from '../src/menuSelect/'
 
 const MenuSelect = ({
   label,
@@ -84,4 +64,6 @@ const MenuSelect = ({
 
 MenuSelect.propTypes = propTypes
 
-export default MenuSelect
+const EnhancedMenuSelect = enhance(MenuSelect)
+
+export default EnhancedMenuSelect
