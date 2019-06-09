@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import isNightTime from './isNightTime'
-import componentName from '../componentName'
+import wrapDisplayName from '../wrapDisplayName'
 
 const darkThemeState = ([ darkThemeEnabled, setState ]) => ({
   darkTheme: {
@@ -16,9 +16,11 @@ const enhance = Component => props => (
   />
 )
 
+const useDisplayName = wrapDisplayName('UsingDarkTheme')
+
 const useDarkTheme = Component => {
   const EnhancedComponent = enhance(Component)
-  EnhancedComponent.displayName = `UsingDarkTheme(${componentName(Component)})`
+  EnhancedComponent.displayName = useDisplayName(Component)
   return EnhancedComponent
 }
 

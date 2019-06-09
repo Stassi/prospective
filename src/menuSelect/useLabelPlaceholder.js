@@ -1,5 +1,5 @@
 import React from 'react'
-import componentName from '../componentName'
+import wrapDisplayName from '../wrapDisplayName'
 
 const enhance = Component => ({ value, ...props }) => (
   <Component
@@ -9,9 +9,11 @@ const enhance = Component => ({ value, ...props }) => (
   />
 )
 
+const useDisplayName = wrapDisplayName('UsingLabelPlaceholder')
+
 const useLabelPlaceholder = Component => {
   const EnhancedComponent = enhance(Component)
-  EnhancedComponent.displayName = `UsingLabelPlaceholder(${componentName(Component)})`
+  EnhancedComponent.displayName = useDisplayName(Component)
   return EnhancedComponent
 }
 

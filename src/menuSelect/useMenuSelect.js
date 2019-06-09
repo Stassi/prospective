@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import componentName from '../componentName'
+import wrapDisplayName from '../wrapDisplayName'
 
 const menuSelectState = ([ selected, setState ]) => ({
   menuSelect: {
@@ -15,9 +15,11 @@ const enhance = Component => ({ initialSelected, ...props }) => (
   />
 )
 
+const useDisplayName = wrapDisplayName('UsingMenuSelect')
+
 const useMenuSelect = Component => {
   const EnhancedComponent = enhance(Component)
-  EnhancedComponent.displayName = `UsingMenuSelect(${componentName(Component)})`
+  EnhancedComponent.displayName = useDisplayName(Component)
   return EnhancedComponent
 }
 
