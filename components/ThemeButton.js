@@ -1,11 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import BrightnessHigh from '@material-ui/icons/BrightnessHigh'
 import IconButton from '@material-ui/core/IconButton'
-
-const propTypes = {
-  toggleDarkTheme: PropTypes.func.isRequired
-}
+import enhance from '../src/themeButton'
 
 const ThemeButton = ({ toggleDarkTheme }) => (
   <IconButton onClick={toggleDarkTheme}>
@@ -13,6 +9,6 @@ const ThemeButton = ({ toggleDarkTheme }) => (
   </IconButton>
 )
 
-ThemeButton.propTypes = propTypes
+const EnhancedThemeButton = enhance(ThemeButton)
 
-export default ThemeButton
+export default EnhancedThemeButton
