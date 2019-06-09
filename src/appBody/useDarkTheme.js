@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import isNightTime from '../isNightTime'
+import isNightTime from './isNightTime'
 import componentName from '../componentName'
 
 const darkThemeState = ([ darkThemeEnabled, setState ]) => ({
