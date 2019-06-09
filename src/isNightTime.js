@@ -1,4 +1,6 @@
-const isNight = hour => hour < 6 || hour > 18
+const sunrise = 6
+const sunset = 18
+const isNight = hour => hour < sunrise || hour > sunset
 const currentHour = () => new Date().getHours()
 const isNightTime = () => isNight(currentHour())
 
