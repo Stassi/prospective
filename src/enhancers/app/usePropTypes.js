@@ -5,6 +5,7 @@ const usePropTypes = setPropTypes({
   Component: PropTypes.func.isRequired,
   pageProps: PropTypes.object,
   theme: PropTypes.object.isRequired,
+  titleText: PropTypes.string,
   toggleDarkTheme: PropTypes.func.isRequired
 })
 

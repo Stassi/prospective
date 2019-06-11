@@ -1,9 +1,8 @@
 import React from 'react'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { ThemeProvider } from '@material-ui/styles'
-import { appBody as enhance } from '../src/enhancers'
 
-const AppBody = ({
+const Body = ({
   Component,
   pageProps,
   theme,
@@ -18,6 +17,4 @@ const AppBody = ({
   </ThemeProvider>
 )
 
-const EnhancedAppBody = enhance(AppBody)
-
-export default EnhancedAppBody
+export default Body
