@@ -3,10 +3,10 @@ import useDefaultProps from './useDefaultProps'
 import usePropTypes from './usePropTypes'
 import { withRouter } from 'next/router'
 
-const enhance = compose(
+const link = compose(
   withRouter,
   usePropTypes,
   useDefaultProps
 )
 
-export default enhance
+export default link

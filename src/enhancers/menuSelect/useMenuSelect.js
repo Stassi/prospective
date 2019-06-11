@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import wrapDisplayName from '../wrapDisplayName'
+import wrapDisplayName from '../../wrapDisplayName'
 
 const menuSelectState = ([ selected, setState ]) => ({
   menuSelect: {

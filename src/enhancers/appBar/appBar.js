@@ -3,10 +3,10 @@ import useDefaultProps from './useDefaultProps'
 import usePropTypes from './usePropTypes'
 import useStyles from './useStyles'
 
-const enhance = compose(
+const appBar = compose(
   useStyles,
   usePropTypes,
   useDefaultProps
 )
 
-export default enhance
+export default appBar

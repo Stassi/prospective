@@ -4,11 +4,11 @@ import useMenuSelect from './useMenuSelect'
 import usePropTypes from './usePropTypes'
 import useStyles from './useStyles'
 
-const enhance = compose(
+const menuSelect = compose(
   useLabelPlaceholder,
   useMenuSelect,
   useStyles,
   usePropTypes
 )
 
-export default enhance
+export default menuSelect

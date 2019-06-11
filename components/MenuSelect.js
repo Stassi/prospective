@@ -4,7 +4,7 @@ import Input from '@material-ui/core/Input'
 import InputLabel from '@material-ui/core/InputLabel'
 import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
-import enhance from '../src/menuSelect'
+import { menuSelect as enhance } from '../src/enhancers'
 
 const MenuSelect = ({
   label,

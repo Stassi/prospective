@@ -1,7 +1,7 @@
 import React from 'react'
 import BrightnessHigh from '@material-ui/icons/BrightnessHigh'
 import IconButton from '@material-ui/core/IconButton'
-import enhance from '../src/themeButton'
+import { themeButton as enhance } from '../src/enhancers'
 
 const ThemeButton = ({ toggleDarkTheme }) => (
   <IconButton onClick={toggleDarkTheme}>

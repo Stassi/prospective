@@ -1,5 +1,5 @@
 import React from 'react'
-import wrapDisplayName from '../wrapDisplayName'
+import wrapDisplayName from '../../wrapDisplayName'
 
 const enhance = Component => ({ value, ...props }) => (
   <Component

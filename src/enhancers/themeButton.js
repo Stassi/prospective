@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import { setPropTypes } from 'recompose'
 
-const enhance = setPropTypes({
+const themeButton = setPropTypes({
   toggleDarkTheme: PropTypes.func.isRequired
 })
 
-export default enhance
+export default themeButton

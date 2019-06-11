@@ -2,7 +2,7 @@ import React from 'react'
 import AppBarMui from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import enhance from '../src/appBar'
+import { appBar as enhance } from '../src/enhancers'
 
 const AppBar = ({
   children,

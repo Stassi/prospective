@@ -1,7 +1,7 @@
 import React from 'react'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { ThemeProvider } from '@material-ui/styles'
-import enhance from '../src/appBody'
+import { appBody as enhance } from '../src/enhancers'
 import theme from '../src/theme'
 
 const AppBody = ({
