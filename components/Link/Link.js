@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import MuiLink from '@material-ui/core/Link'
 import NextComposedLink from './NextComposedLink'
-import { link as enhance } from '../src/enhancers'
+import { link as enhance } from '../../src/enhancers'
 
 const Link = props => {
   const {

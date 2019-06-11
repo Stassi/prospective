@@ -1,6 +1,6 @@
 import React from 'react'
 import NextLink from 'next/link'
-import { nextComposedLink as enhance } from '../src/enhancers'
+import { nextComposedLink as enhance } from '../../src/enhancers'
 
 const NextComposedLink = ({
   as,
