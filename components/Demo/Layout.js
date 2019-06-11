@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography'
 import MadeWithLove from './MadeWithLove'
 import ProTip from './ProTip'
 
-const DemoLayout = ({ children }) => (
+const Layout = ({ children }) => (
   <Container maxWidth='sm'>
     <Box my={4}>
       <Typography
@@ -22,4 +22,4 @@ const DemoLayout = ({ children }) => (
   </Container>
 )
 
-export default DemoLayout
+export default Layout
