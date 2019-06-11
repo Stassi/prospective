@@ -6,16 +6,9 @@ import Document, {
 } from 'next/document'
 import { ServerStyleSheets } from '@material-ui/styles'
 import flush from 'styled-jsx/server'
-import theme from '../src/theme'
 
-// TODO: Import themeColor from existing instance, avoid superfluous call
-const {
-  palette: {
-    primary: {
-      main: themeColor
-    }
-  }
-} = theme()
+// TODO: Inherit dynamic theme color from palette.primary.main
+const themeColor = '#556cd6'
 
 class MyDocument extends Document {
   render () {

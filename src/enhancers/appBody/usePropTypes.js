@@ -3,11 +3,9 @@ import { setPropTypes } from 'recompose'
 
 const usePropTypes = setPropTypes({
   Component: PropTypes.func.isRequired,
-  darkTheme: PropTypes.shape({
-    enabled: PropTypes.bool.isRequired,
-    toggle: PropTypes.func.isRequired
-  }).isRequired,
-  pageProps: PropTypes.object
+  pageProps: PropTypes.object,
+  theme: PropTypes.object.isRequired,
+  toggleDarkTheme: PropTypes.func.isRequired
 })
 
 export default usePropTypes

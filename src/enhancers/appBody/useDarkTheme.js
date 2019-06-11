@@ -3,10 +3,8 @@ import isNightTime from './isNightTime'
 import wrapDisplayName from '../wrapDisplayName'
 
 const darkThemeState = ([ darkThemeEnabled, setState ]) => ({
-  darkTheme: {
-    enabled: darkThemeEnabled,
-    toggle: () => setState(!darkThemeEnabled)
-  }
+  darkThemeEnabled,
+  toggleDarkTheme: () => setState(!darkThemeEnabled)
 })
 
 const enhance = Component => props => (
