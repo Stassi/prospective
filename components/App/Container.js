@@ -3,10 +3,27 @@ import { Container as NextContainer } from 'next/app'
 import Body from './Body'
 import Head from './Head'
 
-const Container = ({ titleText, ...props }) => (
+const Container = ({
+  theme,
+  titleText,
+  theme: {
+    palette: {
+      primary: {
+        main: themeColor
+      }
+    }
+  },
+  ...props
+}) => (
   <NextContainer>
-    <Head {...{ titleText }} />
-    <Body {...props} />
+    <Head {...{
+      themeColor,
+      titleText
+    }} />
+    <Body
+      {...props}
+      {...{ theme }}
+    />
   </NextContainer>
 )
 

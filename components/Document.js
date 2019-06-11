@@ -7,9 +7,6 @@ import NextDocument, {
 import { ServerStyleSheets } from '@material-ui/styles'
 import flush from 'styled-jsx/server'
 
-// TODO: Inherit dynamic theme color from palette.primary.main
-const themeColor = '#556cd6'
-
 class Document extends NextDocument {
   render () {
     return (
@@ -22,10 +19,6 @@ class Document extends NextDocument {
           <meta
             content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no'
             name='viewport'
-          />
-          <meta
-            content={themeColor}
-            name='theme-color'
           />
           <link
             href='https://fonts.googleapis.com/css?family=Roboto:300,400,500'
