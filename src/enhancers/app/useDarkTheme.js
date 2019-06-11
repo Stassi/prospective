@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import isNightTime from './isNightTime'
-import wrapDisplayName from '../wrapDisplayName'
+import isNightTime from '../../isNightTime'
+import wrapDisplayName from '../../wrapDisplayName'
 
 const darkThemeState = ([ darkThemeEnabled, setState ]) => ({
   darkThemeEnabled,
