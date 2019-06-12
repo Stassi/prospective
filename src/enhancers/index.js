@@ -4,7 +4,7 @@ import document from './document'
 import link from './link'
 import menuSelect from './menuSelect'
 import nextComposedLink from './nextComposedLink'
-import searchField from './searchField'
+import textField from './textField'
 import themeButton from './themeButton'
 
 export {
@@ -14,6 +14,6 @@ export {
   link,
   menuSelect,
   nextComposedLink,
-  searchField,
+  textField,
   themeButton
 }
