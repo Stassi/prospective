@@ -5,7 +5,6 @@ import { debugContainer as enhance } from '../../src/enhancers'
 
 const DebugContainer = ({
   classes: {
-    container,
     formControl,
     selectEmpty,
     textField
@@ -13,7 +12,6 @@ const DebugContainer = ({
 }) => (
   <form
     autoComplete='off'
-    className={container}
     noValidate
   >
     <SeedTextField classes={{ textField }} />

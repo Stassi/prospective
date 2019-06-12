@@ -1,16 +1,10 @@
 import { withStyles } from '@material-ui/core'
 
-const container = () => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap'
-  }
-})
-
 const menuSelect = spacing => ({
   formControl: {
-    margin: spacing(1),
-    minWidth: 120
+    marginLeft: spacing(1),
+    marginRight: spacing(1),
+    minWidth: 100
   },
   selectEmpty: {
     marginTop: spacing(2)
@@ -20,13 +14,11 @@ const menuSelect = spacing => ({
 const textField = spacing => ({
   textField: {
     marginLeft: spacing(1),
-    marginRight: spacing(1),
-    width: 200
+    marginRight: spacing(1)
   }
 })
 
 const useStyles = withStyles(({ spacing }) => ({
-  ...container(),
   ...menuSelect(spacing),
   ...textField(spacing)
 }))
