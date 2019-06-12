@@ -3,7 +3,7 @@ import { debugContainer as enhance } from '../src/enhancers'
 import SeedTextField from './SeedTextField'
 import AlgorithmMenuSelect from './AlgorithmMenuSelect'
 
-const DebugContainer = ({ classes: root }) => (
+const DebugContainer = ({ classes: { root } }) => (
   <form
     autoComplete='off'
     className={root}
