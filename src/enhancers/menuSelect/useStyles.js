@@ -5,10 +5,6 @@ const useStyles = withStyles(({ spacing }) => ({
     margin: spacing(1),
     minWidth: 120
   },
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap'
-  },
   selectEmpty: {
     marginTop: spacing(2)
   }

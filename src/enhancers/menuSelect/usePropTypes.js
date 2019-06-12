@@ -4,7 +4,6 @@ import { setPropTypes } from 'recompose'
 const usePropTypes = setPropTypes({
   classes: PropTypes.shape({
     formControl: PropTypes.string.isRequired,
-    root: PropTypes.string.isRequired,
     selectEmpty: PropTypes.string.isRequired
   }).isRequired,
   label: PropTypes.string.isRequired,

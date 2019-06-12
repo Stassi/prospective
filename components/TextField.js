@@ -5,23 +5,14 @@ import { textField as enhance } from '../src/enhancers'
 const TextField = ({
   onChange,
   value,
-  classes: {
-    container,
-    textField
-  },
+  classes: { textField },
   ...props
 }) => (
-  <form
-    autoComplete='off'
-    className={container}
-    noValidate
-  >
-    <TextFieldMui
-      {...{ onChange, value }}
-      className={textField}
-      {...props}
-    />
-  </form>
+  <TextFieldMui
+    {...{ onChange, value }}
+    className={textField}
+    {...props}
+  />
 )
 
 const EnhancedTextField = enhance(TextField)

@@ -13,7 +13,6 @@ const MenuSelect = ({
   value,
   classes: {
     formControl,
-    root,
     selectEmpty
   },
   menuSelect: {
@@ -21,45 +20,40 @@ const MenuSelect = ({
     setSelected
   }
 }) => (
-  <form
-    autoComplete='off'
-    className={root}
-  >
-    <FormControl className={formControl}>
-      <InputLabel
-        htmlFor={labelPlaceholder}
-        shrink
-      >
-        {label}
-      </InputLabel>
+  <FormControl className={formControl}>
+    <InputLabel
+      htmlFor={labelPlaceholder}
+      shrink
+    >
+      {label}
+    </InputLabel>
 
-      <Select
-        className={selectEmpty}
-        displayEmpty
-        input={(
-          <Input
-            id={labelPlaceholder}
-            name={value}
-          />
-        )}
-        name={value}
-        onChange={setSelected}
-        value={selected}
-      >
-        {options.map(({
-          label: optionLabel,
-          value: optionValue
-        }) => (
-          <MenuItem
-            key={optionValue}
-            value={optionValue}
-          >
-            {optionLabel}
-          </MenuItem>
-        ))}
-      </Select>
-    </FormControl>
-  </form>
+    <Select
+      className={selectEmpty}
+      displayEmpty
+      input={(
+        <Input
+          id={labelPlaceholder}
+          name={value}
+        />
+      )}
+      name={value}
+      onChange={setSelected}
+      value={selected}
+    >
+      {options.map(({
+        label: optionLabel,
+        value: optionValue
+      }) => (
+        <MenuItem
+          key={optionValue}
+          value={optionValue}
+        >
+          {optionLabel}
+        </MenuItem>
+      ))}
+    </Select>
+  </FormControl>
 )
 
 const EnhancedMenuSelect = enhance(MenuSelect)

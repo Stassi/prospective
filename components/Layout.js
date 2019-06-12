@@ -1,13 +1,11 @@
 import React from 'react'
-import AlgorithmMenuSelect from './AlgorithmMenuSelect'
 import AppBar from './AppBar'
-import SeedTextField from './SeedTextField'
+import DebugContainer from './DebugContainer'
 import ThemeButton from './ThemeButton'
 
 const Layout = ({ toggleDarkTheme }) => (
   <AppBar>
-    <SeedTextField />
-    <AlgorithmMenuSelect />
+    <DebugContainer />
     <ThemeButton {...{ toggleDarkTheme }} />
   </AppBar>
 )
