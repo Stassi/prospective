@@ -1,5 +1,10 @@
+import { compose } from 'recompose'
+import usePropTypes from './usePropTypes'
 import useStyles from './useStyles'
 
-const debugContainer = Component => useStyles(Component)
+const debugContainer = compose(
+  useStyles,
+  usePropTypes
+)
 
 export default debugContainer
