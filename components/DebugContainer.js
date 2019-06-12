@@ -1,7 +1,7 @@
 import React from 'react'
-import { debugContainer as enhance } from '../src/enhancers'
-import SeedTextField from './SeedTextField'
 import AlgorithmMenuSelect from './AlgorithmMenuSelect'
+import SeedTextField from './SeedTextField'
+import { debugContainer as enhance } from '../src/enhancers'
 
 const DebugContainer = ({ classes: { root } }) => (
   <form
