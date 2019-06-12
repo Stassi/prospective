@@ -3,7 +3,10 @@ import { setPropTypes } from 'recompose'
 
 const usePropTypes = setPropTypes({
   classes: PropTypes.shape({
-    root: PropTypes.string.isRequired
+    container: PropTypes.string.isRequired,
+    formControl: PropTypes.string.isRequired,
+    selectEmpty: PropTypes.string.isRequired,
+    textField: PropTypes.string.isRequired
   }).isRequired
 })
 

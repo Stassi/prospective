@@ -1,9 +1,8 @@
 import React from 'react'
-import MenuSelect from './MenuSelect'
+import MenuSelect from '../MenuSelect'
 
 const AlgorithmMenuSelect = props => (
   <MenuSelect
-    {...props}
     initialSelected='arc4'
     label='Algorithm'
     options={[
@@ -16,6 +15,7 @@ const AlgorithmMenuSelect = props => (
       { label: 'Xorwow', value: 'xorwow' }
     ]}
     value='algorithm'
+    {...props}
   />
 )
 
