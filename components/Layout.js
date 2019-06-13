@@ -1,18 +1,41 @@
 import React from 'react'
+import AlgorithmMenuSelect from './AlgorithmMenuSelect'
 import AppBar from './AppBar'
-import DebugContainer from './DebugContainer'
 import DebugOuterContainer from './DebugOuterContainer'
+import SeedTextField from './SeedTextField'
 import ThemeButton from './ThemeButton'
+import { layout as enhance } from '../src/enhancers'
 
-const Layout = ({ toggleDarkTheme }) => (
+const Layout = ({
+  toggleDarkTheme,
+  classes: {
+    formControl,
+    selectEmpty,
+    textField: textFieldClass
+  }
+}) => (
   <DebugOuterContainer>
-    {props => (
+    {({ menuSelect, textField }) => (
       <AppBar>
-        <DebugContainer {...props} />
+        <form
+          autoComplete='off'
+          noValidate
+        >
+          <SeedTextField
+            {...{ textField }}
+            classes={{ textField: textFieldClass }}
+          />
+          <AlgorithmMenuSelect
+            {...{ menuSelect }}
+            classes={{ formControl, selectEmpty }}
+          />
+        </form>
         <ThemeButton {...{ toggleDarkTheme }} />
       </AppBar>
     )}
   </DebugOuterContainer>
 )
 
-export default Layout
+const EnhancedLayout = enhance(Layout)
+
+export default EnhancedLayout

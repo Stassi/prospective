@@ -1,8 +1,8 @@
 import app from './app'
 import appBar from './appBar'
-import debugContainer from './debugContainer'
 import debugOuterContainer from './debugOuterContainer'
 import document from './document'
+import layout from './layout'
 import link from './link'
 import menuSelect from './menuSelect'
 import nextComposedLink from './nextComposedLink'
@@ -12,9 +12,9 @@ import themeButton from './themeButton'
 export {
   app,
   appBar,
-  debugContainer,
   debugOuterContainer,
   document,
+  layout,
   link,
   menuSelect,
   nextComposedLink,

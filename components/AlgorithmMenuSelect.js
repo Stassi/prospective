@@ -1,5 +1,5 @@
 import React from 'react'
-import MenuSelect from '../MenuSelect'
+import MenuSelect from './MenuSelect'
 
 const AlgorithmMenuSelect = props => (
   <MenuSelect
