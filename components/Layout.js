@@ -21,13 +21,13 @@ const Layout = ({
           autoComplete='off'
           noValidate
         >
-          <SeedTextField
-            {...{ textField }}
-            classes={{ textField: textFieldClass }}
-          />
           <AlgorithmMenuSelect
             {...{ menuSelect }}
             classes={{ formControl, selectEmpty }}
+          />
+          <SeedTextField
+            {...{ textField }}
+            classes={{ textField: textFieldClass }}
           />
         </form>
         <ThemeButton {...{ toggleDarkTheme }} />
