@@ -4,18 +4,26 @@ import SeedTextField from './SeedTextField'
 import { debugContainer as enhance } from '../../src/enhancers'
 
 const DebugContainer = ({
+  menuSelect,
+  textField,
   classes: {
     formControl,
     selectEmpty,
-    textField
+    textField: textFieldClass
   }
 }) => (
   <form
     autoComplete='off'
     noValidate
   >
-    <SeedTextField classes={{ textField }} />
-    <AlgorithmMenuSelect classes={{ formControl, selectEmpty }} />
+    <SeedTextField
+      {...{ textField }}
+      classes={{ textField: textFieldClass }}
+    />
+    <AlgorithmMenuSelect
+      {...{ menuSelect }}
+      classes={{ formControl, selectEmpty }}
+    />
   </form>
 )
 

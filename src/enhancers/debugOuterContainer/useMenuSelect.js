@@ -8,15 +8,16 @@ const menuSelectState = ([selected, setState]) => ({
   }
 })
 
-const enhance = Component => ({ initialSelected, ...props }) => (
+const enhance = Component => ({ initialMenuSelected, ...props }) => (
   <Component
     {...props}
-    {...menuSelectState(useState(initialSelected))}
+    {...menuSelectState(useState(initialMenuSelected))}
   />
 )
 
 const useDisplayName = wrapDisplayName('UsingMenuSelect')
 
+// TODO: Rename
 const useMenuSelect = Component => {
   const EnhancedComponent = enhance(Component)
   EnhancedComponent.displayName = useDisplayName(Component)

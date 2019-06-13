@@ -5,9 +5,10 @@ const usePropTypes = setPropTypes({
   classes: PropTypes.shape({
     textField: PropTypes.string.isRequired
   }).isRequired,
-  initialValue: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired
+  textField: PropTypes.shape({
+    onChange: PropTypes.func.isRequired,
+    value: PropTypes.string.isRequired
+  }).isRequired
 })
 
 export default usePropTypes

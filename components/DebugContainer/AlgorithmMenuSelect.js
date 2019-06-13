@@ -3,7 +3,6 @@ import MenuSelect from '../MenuSelect'
 
 const AlgorithmMenuSelect = props => (
   <MenuSelect
-    initialSelected='arc4'
     label='Algorithm'
     options={[
       { label: 'Alea', value: 'alea' },
