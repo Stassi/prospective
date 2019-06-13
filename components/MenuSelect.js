@@ -11,16 +11,12 @@ const MenuSelect = ({
   labelPlaceholder,
   options,
   value,
-  classes: {
-    formControl,
-    selectEmpty
-  },
   menuSelect: {
     selected,
     setSelected
   }
 }) => (
-  <FormControl className={formControl}>
+  <FormControl>
     <InputLabel
       htmlFor={labelPlaceholder}
       shrink
@@ -29,7 +25,6 @@ const MenuSelect = ({
     </InputLabel>
 
     <Select
-      className={selectEmpty}
       displayEmpty
       input={(
         <Input

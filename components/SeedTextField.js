@@ -2,7 +2,7 @@ import React from 'react'
 import IconButton from '@material-ui/core/IconButton'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import LocalFlorist from '@material-ui/icons/LocalFlorist'
-import TextField from './TextField'
+import TextField from '@material-ui/core/TextField'
 
 const InputProps = {
   startAdornment: (
@@ -14,9 +14,12 @@ const InputProps = {
   )
 }
 
-const SeedTextField = props => (
+const SeedTextField = ({ textField, ...props }) => (
   <TextField
-    {...{ InputProps }}
+    {...{
+      InputProps,
+      ...textField
+    }}
     id='seed'
     label='Seed'
     type='search'

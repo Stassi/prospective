@@ -1,19 +1,12 @@
 import React from 'react'
+import Grid from '@material-ui/core/Grid'
 import AlgorithmMenuSelect from './AlgorithmMenuSelect'
 import AppBar from './AppBar'
 import DebugOuterContainer from './DebugOuterContainer'
 import SeedTextField from './SeedTextField'
 import ThemeButton from './ThemeButton'
-import { layout as enhance } from '../src/enhancers'
 
-const Layout = ({
-  toggleDarkTheme,
-  classes: {
-    formControl,
-    selectEmpty,
-    textField: textFieldClass
-  }
-}) => (
+const Layout = ({ toggleDarkTheme }) => (
   <DebugOuterContainer>
     {({ menuSelect, textField }) => (
       <AppBar>
@@ -21,21 +14,21 @@ const Layout = ({
           autoComplete='off'
           noValidate
         >
-          <SeedTextField
-            {...{ textField }}
-            classes={{ textField: textFieldClass }}
-          />
-          <AlgorithmMenuSelect
-            {...{ menuSelect }}
-            classes={{ formControl, selectEmpty }}
-          />
+          <Grid container spacing={2}>
+            <Grid item>
+              <SeedTextField {...{ textField }} />
+            </Grid>
+            <Grid item>
+              <AlgorithmMenuSelect {...{ menuSelect }} />
+            </Grid>
+            <Grid item>
+              <ThemeButton {...{ toggleDarkTheme }} />
+            </Grid>
+          </Grid>
         </form>
-        <ThemeButton {...{ toggleDarkTheme }} />
       </AppBar>
     )}
   </DebugOuterContainer>
 )
 
-const EnhancedLayout = enhance(Layout)
-
-export default EnhancedLayout
+export default Layout
