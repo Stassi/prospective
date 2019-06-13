@@ -5,7 +5,7 @@ import { document as enhance } from '../../src/enhancers'
 
 class Document extends NextDocument {
   render () {
-    return <PureDocument />
+    return <PureDocument {...this.props} />
   }
 }
 
