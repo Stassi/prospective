@@ -4,6 +4,7 @@ import wrapDisplayName from '../../wrapDisplayName'
 const fieldValueState = ([value, setValue]) => ({
   textField: {
     value,
+    setValue,
     onChange: ({ target: { value: newValue } }) => setValue(newValue)
   }
 })
